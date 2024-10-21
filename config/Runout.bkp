@@ -1,21 +1,21 @@
 
-#####################################################################
-# 	RefillPlease - Filament Runout Sensor
-#####################################################################
+###################################################################
+##	RefillPlease - Filament Runout Sensor
+###################################################################
 
 [filament_switch_sensor RunoutSensor]
-switch_pin: !z:P1.29 # X ESTOP on MCU z for SKR 1.4
+switch_pin: PF1 
 
-# Without M600 macro (uncomment the line below and comment the two lines in the "With Filament change M600 macro"
-# pause_on_runout: true
+## Without M600 macro (uncomment the line below and comment the two lines in the "With Filament change M600 macro"
+pause_on_runout: true
 
-# With M600 Filament change macro
+## With M600 Filament change macro
 pause_on_runout: false
 runout_gcode: M600
 
-#####################################################################
-# 	Filament change macro M600
-#####################################################################
+###################################################################
+##	Filament change macro M600
+###################################################################
 
 [gcode_macro M600]
 variable_park_x: 150
@@ -26,8 +26,8 @@ variable_retract: 1
 gcode:
     SAVE_GCODE_STATE NAME=STATE_M600
     
-    # remembers the position
-    # fluidd annoyingly redefines this macro to retract and park the toolhead at the rear
+    ## remembers the position
+    ## fluidd annoyingly redefines this macro to retract and park the toolhead at the rear
     BASE_PAUSE 
     
     # safe park coords

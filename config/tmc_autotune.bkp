@@ -1,13 +1,13 @@
 [autotune_tmc stepper_x]
-motor: ldo-42sth40-2004mah
+motor: ldo-42sth48-2804ah
 voltage: 24
-sg4_thrs: 137
+#sgt: 1
 tuning_goal: auto
 
 [autotune_tmc stepper_y]
-motor: ldo-42sth40-2004mah
+motor: ldo-42sth48-2804ah
 voltage: 24
-sg4_thrs: 130
+#sgt: 1
 tuning_goal: auto
 
 [autotune_tmc stepper_z]
